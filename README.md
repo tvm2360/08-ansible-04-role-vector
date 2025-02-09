@@ -30,9 +30,7 @@ Description: Role install vector
 | [vector_platform](vars/main.yml#L2)   | str   | `x86_64` |    n/a  |  n/a |
 | [vector_directory](vars/main.yml#L3)   | str   | `/opt` |    n/a  |  n/a |
 
-
 ### Tasks
-
 
 #### File: tasks/main.yml
 
