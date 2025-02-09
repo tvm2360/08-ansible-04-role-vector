@@ -1,36 +1,30 @@
-# 📃 Role overview
+# 📃Роль 08-ansible-04-rolevectore
 
-## 08-ansible-04-role-vector
-
-Description: Role install vector
+Описание: Роль устанавливает Vector
 
 | Field                | Value           |
 |--------------------- |-----------------|
 | Readme update        | 09/02/2025 |
 
-### Defaults
+### Defaults: Статические переменные с низким приоритетом
 
-**These are static variables with lower priority**
-
-#### File: defaults/main.yml
+#### Файл: defaults/main.yml
 
 | Var          | Type         | Value       |Required    | Title       |
 |--------------|--------------|-------------|-------------|-------------|
 | [vector_version](defaults/main.yml#L2)   | str   | `0.44.0` |    n/a  |  n/a |
 | [vector_clickhouse_ip](defaults/main.yml#L3)   | str   | `172.17.0.2` |    n/a  |  n/a |
 
+### Vars: Статические переменные с высоким приоритетом
 
-### Vars
-
-**These are variables with higher priority**
-#### File: vars/main.yml
+#### Файл: vars/main.yml
 
 | Var          | Type         | Value       |Required    | Title       |
 |--------------|--------------|-------------|-------------|-------------|
 | [vector_platform](vars/main.yml#L2)   | str   | `x86_64` |    n/a  |  n/a |
 | [vector_directory](vars/main.yml#L3)   | str   | `/opt` |    n/a  |  n/a |
 
-### Tasks
+### Tasks: Задания
 
 #### File: tasks/main.yml
 
@@ -43,8 +37,7 @@ Description: Role install vector
 | Get vector config | template | False |
 | Flush handlers |  | False |
 
-
-## Playbook
+## Сценарий
 
 ```yml
 ---
@@ -55,17 +48,18 @@ Description: Role install vector
 
 ```
 
-## Author Information
+## Автор
+
 tvm2360
 
-#### License
+#### Лицензия
 
 MIT
 
-#### Minimum Ansible Version
+#### Минимальная верия ansible
 
-2.1
+2.10
 
-#### Platforms
+#### Платформы
 
 - **Ubuntu**: [20.04]
